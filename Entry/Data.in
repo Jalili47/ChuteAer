@@ -1,0 +1,48 @@
+----------Flow-Specifications
+Qw=3.150D+00                                       ! Water Flow Discharge
+H0=0.250D-00         				   ! Initial Flow Depth
+te=45.00D+00           				   ! Channel Slope 
+op=4
+NJ=25                 				   ! Number of Cells in Depth
+DX=0.01000D-00    				   ! Mesh Size in the Flow Direction
+Le=40.0000D-00     				   ! Domain Length
+Qj=0.01000D-00        				   ! Reference Residual Flow
+Np=40         
+----------Output-Files 
+Results\Output_a.out   				 ! Water Free Surface along the Channel
+Results\Output_b.out   				 ! Air Concentration and Velocity Distributions across the Depth at Different Sections.
+Results\Output_c.dat   				 ! Prepared Data for Tecplot Software
+----------Initial-profile-ip=1=>-profile-1/7 else, Uniform Flow
+Idp=1
+VvelJudge=1.0000-9
+UstarJudg=0.01D0
+UvelJudge=2.D5
+----------Turbulent-properties-id=0=>-only-du/dy
+Ks=0.00100D-00
+Kp=0.40000D+00
+Idf=2
+-Convection-diffusion-on=1=>-solve-convection-diffusion_if-eshmit=0.000 then eshmit=f(Richardsen) 
+idcondiff=1
+Vs=0.25D-00
+IdVspAuto=1
+IdChanson=1
+IdLinearr=0
+underelax=0.025
+Phiajudge=1.0000D-05
+esh=0.000D-0
+IdSurface=1  
+IdBotttom=0
+ph0=0.00D-00
+ph1=0.00D-00
+ph2=0.900D+00
+z1= 20.00
+z2= 30.00 
+x1=10000.00
+x2=10001.00
+0
+z1=0.03 
+p1=0.5
+z2=0.050   
+p2=1.0
+z3=0.110   
+p3=9.0
